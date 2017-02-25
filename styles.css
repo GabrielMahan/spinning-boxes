@@ -5,9 +5,9 @@ body {
 }
 
 .container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  /*display: flex;*/
+  /*flex-direction: row;*/
+  /*justify-content: space-around;*/
   background-color: #E3D5C3;
   font-family: 'Barrio', cursive;
   color: white;
@@ -22,12 +22,15 @@ body {
   padding: 1em;
   transition: 1s;
   animation-name: wiggle;
-  animation-duration: .1s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   border-radius: 10px;
+  position: relative;
+  left: 0%;
+  margin: 2em;
 }
 
 .box:hover {
@@ -42,13 +45,16 @@ body {
 @keyframes wiggle {
   0% {
     transform: rotate(0deg);
+    left: 0%;
   }
 
   50% {
     transform: rotate(5deg);
+    left: 25%;
   }
 
   100% {
-    transform: rotate(10deg);
+    transform: rotate(360deg);
+    left: 75%;
   }
 }
